@@ -39,6 +39,15 @@ menu.addEventListener('click', (e) => {
 
         // Adicionando no carrinho
         addToCart(name, price)
+
+        // Exibindo o Toastify avisando que o produto foi adicionado  
+        Toastify({  
+            text: `Produto "${name}" adicionado ao carrinho!`,  
+            duration: 2000, // Tempo em milissegundos que o toast ficará visível  
+            gravity: "top", // Posição: "top" ou "bottom"  
+            position: 'right', // Posição: "left", "center", "right"  
+            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)", // Cor do background  
+        }).showToast();
     }
 });
 
